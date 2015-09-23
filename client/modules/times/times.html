@@ -1,0 +1,91 @@
+<template name="times">
+    <div id="page-wrapper">
+        {{> loginButtons }}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">g</h1>
+            </div>
+        </div>
+
+        <!--{{> novoParticipante}}-->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Formação</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each times}}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Jogador</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each posicoes}}
+                                <tr>
+                                    <td>
+                                        {{nome}}
+                                    </td>
+                                    <td>
+                                        {{jogadorNome}}
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Jogos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each jogos}}
+                                <tr>
+                                    <td>
+                                        {{nome}}
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </td>
+
+                    <td>
+                        <a href="/atualizaTime/{{this._id}}" class="edita editaTime"><span >Editar</span></a>
+                    </td>
+                    <td>
+                        <button class="close apagaTime"><span >&times;</span></button>
+                    </td>
+                </tr>
+
+
+                {{/each}}
+            </tbody>
+        </table>
+
+
+        <!--        <div class="row">
+                    <div class="col-lg-12">
+                        Jogos.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        {{nome}}
+                    </div>
+                </div>-->
+
+    </div>
+</template>

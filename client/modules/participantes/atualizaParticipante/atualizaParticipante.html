@@ -1,0 +1,38 @@
+<template name="atualizaParticipante">
+    <!--{{log standalone}}-->
+
+    {{#if standalone}}
+    <div id="page-wrapper">
+        {{> quickForm collection="Participantes" doc=this id="atualizaParticipanteForm" type="update"}}
+        {{ log this }}
+        <!-- Input criação de game -->
+        <!--{{log}}-->
+        <!--        <form id="novoParticipante">
+                    <div class="form-group">
+                        <label>Atualizar Jogo: <input type="text" class="form-control" id="nomeParticipante"/></label>
+                    </div>
+                    {{> adicionarMeta}}
+                </form>-->
+
+    </div>
+    {{else}}
+
+    <!-- Input criação de game -->
+    <!--{{log}}-->
+
+
+
+    <!--    <form id="novoParticipante">
+            <div class="form-group">
+                <label>Novo Jogo: <input type="text" class="form-control" id="nomeParticipante"/></label>
+            </div>
+            {{> adicionarMeta}}
+            <button type="submit">Adicionar</button>
+        </form>-->
+
+
+
+    {{> quickForm collection="Participantes" doc=this id="atualizaParticipanteForm" type="update"}}
+    {{/if}}
+    <!-- Fim input criação de game -->
+</template>

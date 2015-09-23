@@ -1,0 +1,20 @@
+<template name="novoGame">
+    {{log standalone}}
+
+    {{#if standalone}}
+    <div id="page-wrapper">
+
+        <form id="novoGame">
+            <div class="form-group">
+                <label>Novo Jogo: <input type="text" class="form-control" id="nomeGame"/></label>
+            </div>
+            {{> adicionarMeta}}
+        </form>
+
+    </div>
+    {{else}}
+
+        {{> quickForm collection="Games" id="insertGameForm" type="insert"}}
+    
+    {{/if}}
+</template>

@@ -1,0 +1,40 @@
+<template name="metricas">
+    <div id="page-wrapper">
+        <!--{{> loginButtons }}-->
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Metricas</h1>
+            </div>
+        </div>
+
+        <!--{{> novaMetrica}}-->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Peso</th>
+                    <th>Jogo</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each metricas}}
+                <tr>
+                    <!--<td>{{_id}}</td>-->
+                    <td>{{nome}}</td>
+                    <td>{{peso}}</td>
+                    <td>{{game.nome}}</td>
+
+
+            <a href="/atualizaMetrica/{{this._id}}" class="edita editaMetrica"><span >Editar</span></a>
+            <button class="close apagaMetrica"><span >&times;</span></button>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+
+    </div>
+</template>

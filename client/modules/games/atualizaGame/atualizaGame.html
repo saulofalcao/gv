@@ -1,0 +1,58 @@
+<template name="atualizaGame">
+    <!--{{log standalone}}-->
+
+    {{#if standalone}}
+    <div id="page-wrapper">
+        {{> quickForm collection="Games" doc=this id="atualizaGameForm" type="update"}}
+
+<!--        <form>-->
+<!--            {{#each participantes}}
+            <input type="checkbox" name="participantes" value={{this._id}} checked={{ehParticipante}} >{{this.nome}}
+            {{/each}}-->
+        <!--</form>-->
+<!--        {{#with participantes}}
+        {{#autoForm collection="Games" doc=this id="atualizaGameForm2" type="update"}}
+            {{> afFieldInput name='participantes' options=opcoesCheckbox checked=ehParticipante }}
+        {{/autoForm}}
+        {{/with}}-->
+<!--        <strong>Sei la omi 1 {{this.nome}}</strong>
+        {{log participantes}}
+        {{#with game}}
+        <strong>Participantes123123: </strong>{{participantes}}
+        {{/with}}-->
+        <!-- Input criação de game -->
+        <!--{{log}}-->
+        <!--        <form id="novoGame">
+                    <div class="form-group">
+                        <label>Atualizar Jogo: <input type="text" class="form-control" id="nomeGame"/></label>
+                    </div>
+                    {{> adicionarMeta}}
+                </form>-->
+
+    </div>
+    {{else}}
+    <strong>Sei la omi</strong>
+
+    {{#with game}}
+    <strong>Participanteslalala: </strong>{{participantes}}
+    {{/with}}
+
+    <!-- Input criação de game -->
+    <!--{{log}}-->
+
+
+
+    <!--    <form id="novoGame">
+            <div class="form-group">
+                <label>Novo Jogo: <input type="text" class="form-control" id="nomeGame"/></label>
+            </div>
+            {{> adicionarMeta}}
+            <button type="submit">Adicionar</button>
+        </form>-->
+
+
+
+    <!--{{> quickForm collection="Games" doc=this id="atualizaGameForm" type="update"}}-->
+    {{/if}}
+    <!-- Fim input criação de game -->
+</template>

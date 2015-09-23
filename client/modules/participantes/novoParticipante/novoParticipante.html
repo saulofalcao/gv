@@ -1,0 +1,23 @@
+<template name="novoParticipante">
+    {{log standalone}}
+
+    {{#if standalone}}
+    <div id="page-wrapper">
+
+        <!-- Input criação de game -->
+        <!--{{log}}-->
+        <form id="novoParticipante">
+            <div class="form-group">
+                <label>Novo Participante <input type="text" class="form-control" id="nomeParticipante"/></label>
+            </div>
+            {{> adicionarMeta}}
+        </form>
+
+    </div>
+    {{else}}
+
+
+    {{> quickForm collection="Participantes" id="insertParticipanteForm" type="insert"}}
+    {{/if}}
+    <!-- Fim input criação de game -->
+</template>

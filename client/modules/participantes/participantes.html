@@ -1,0 +1,52 @@
+<template name="participantes">
+    <div id="page-wrapper">
+        {{> loginButtons }}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">g</h1>
+            </div>
+        </div>
+
+        {{> novoParticipante}}
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each participantes}}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td>{{email}}</td>
+                    <td>
+                        <a href="/atualizaParticipante/{{this._id}}" class="edita editaParticipante"><span >Editar</span></a>
+                    </td>
+                    <td>
+                        <button class="close apagaParticipante"><span >&times;</span></button>
+                    </td>
+                </tr>
+
+
+                {{/each}}
+            </tbody>
+        </table>
+
+
+        <!--        <div class="row">
+                    <div class="col-lg-12">
+                        Jogos.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        {{nome}}
+                    </div>
+                </div>-->
+
+    </div>
+</template>
