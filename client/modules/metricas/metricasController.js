@@ -1,6 +1,6 @@
 Template.metricas.helpers({
     metricas: getMetricas,
-    apagaMetrica: apagaMetrica,
+    apagaMetrica: apagaMetrica, 
     game: getGame
 //    times: getTimesDoJogo
 //    novoMetrica: novoMetrica
